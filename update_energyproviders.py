@@ -6,7 +6,7 @@ from uszipcode import SearchEngine
 
 # File paths
 # EXCEL_FILE_URL = "https://downloads.energystar.gov/bi/portfolio-manager/Public_Utility_Map_en_US.xlsx?_gl=1*1uadakz*_ga*MjcyNDg3MTg3LjE3NDQ2NTE3NTg.*_ga_S0KJTVVLQ6*MTc0NDY1MTc1Ny4xLjEuMTc0NDY1MjIwOC4wLjAuMA.."
-LOCAL_EXCEL_FILE = "data/Public_Utility_Map_en_US.xlsx"
+LOCAL_EXCEL_FILE = "List of Utility Companies.xlsx"
 UPDATED_EXCEL_FILE = "data/Public_Utility_Map_with_City.xlsx"
 ENERGY_PROVIDERS_JSON = "energyproviders.json"
 

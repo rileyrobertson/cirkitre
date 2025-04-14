@@ -1,0 +1,142 @@
+[
+  {
+    "provider": "Comcast Xfinity",
+    "service_areas": [
+      {
+        "city": "San Francisco",
+        "state": "California",
+        "zip_codes": ["94102", "94103", "94104", "94105", "94107", "94108", "94109"]
+      },
+      {
+        "city": "Oakland",
+        "state": "California",
+        "zip_codes": ["94601", "94602", "94603", "94604", "94605", "94606", "94607"]
+      },
+      {
+        "city": "San Jose",
+        "state": "California",
+        "zip_codes": ["95110", "95111", "95112", "95113", "95116", "95117", "95118"]
+      }
+    ]
+  },
+  {
+    "provider": "AT&T Internet",
+    "service_areas": [
+      {
+        "city": "Sacramento",
+        "state": "California",
+        "zip_codes": ["95814", "95815", "95816", "95817", "95818", "95819", "95820"]
+      },
+      {
+        "city": "Berkeley",
+        "state": "California",
+        "zip_codes": ["94701", "94702", "94703", "94704", "94705", "94706", "94707"]
+      },
+      {
+        "city": "Fresno",
+        "state": "California",
+        "zip_codes": ["93701", "93702", "93703", "93704", "93705", "93706", "93710"]
+      }
+    ]
+  },
+  {
+    "provider": "Sonic Internet",
+    "service_areas": [
+      {
+        "city": "Santa Rosa",
+        "state": "California",
+        "zip_codes": ["95401", "95402", "95403", "95404", "95405", "95406", "95407"]
+      },
+      {
+        "city": "Petaluma",
+        "state": "California",
+        "zip_codes": ["94952", "94953", "94954", "94955", "94975"]
+      },
+      {
+        "city": "Sebastopol",
+        "state": "California",
+        "zip_codes": ["95472", "95473"]
+      }
+    ]
+  },
+  {
+    "provider": "Wave Broadband",
+    "service_areas": [
+      {
+        "city": "Rocklin",
+        "state": "California",
+        "zip_codes": ["95677", "95765"]
+      },
+      {
+        "city": "Roseville",
+        "state": "California",
+        "zip_codes": ["95661", "95678", "95747"]
+      },
+      {
+        "city": "El Dorado Hills",
+        "state": "California",
+        "zip_codes": ["95762"]
+      }
+    ]
+  },
+  {
+    "provider": "Frontier Communications",
+    "service_areas": [
+      {
+        "city": "Redding",
+        "state": "California",
+        "zip_codes": ["96001", "96002", "96003", "96049"]
+      },
+      {
+        "city": "Chico",
+        "state": "California",
+        "zip_codes": ["95926", "95927", "95928", "95929", "95973"]
+      },
+      {
+        "city": "Eureka",
+        "state": "California",
+        "zip_codes": ["95501", "95502", "95503"]
+      }
+    ]
+  },
+  {
+    "provider": "HughesNet (Satellite)",
+    "service_areas": [
+      {
+        "city": "South Lake Tahoe",
+        "state": "California",
+        "zip_codes": ["96150", "96151", "96152", "96153"]
+      },
+      {
+        "city": "Truckee",
+        "state": "California",
+        "zip_codes": ["96160", "96161"]
+      },
+      {
+        "city": "Northern California Rural Areas",
+        "state": "California",
+        "zip_codes": ["96001", "96002", "96003", "95501", "95503", "95401"]
+      }
+    ]
+  },
+  {
+    "provider": "Viasat (Satellite)",
+    "service_areas": [
+      {
+        "city": "Yreka",
+        "state": "California",
+        "zip_codes": ["96097"]
+      },
+      {
+        "city": "Weaverville",
+        "state": "California",
+        "zip_codes": ["96093"]
+      },
+      {
+        "city": "Northern California Remote Areas",
+        "state": "California",
+        "zip_codes": ["96001", "96002", "96003", "95501", "95503", "95401"]
+      }
+    ]
+  }
+]

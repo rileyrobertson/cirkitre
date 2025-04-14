@@ -42,7 +42,6 @@ def add_city_to_excel(file_path, updated_file_path):
         # Add a new "city" column
         cities = []
         for zip_code in df["Zip Codes"]:
-            # Ensure ZIP code is valid and not empty
             if pd.isna(zip_code):
                 cities.append("")
                 continue
@@ -51,15 +50,18 @@ def add_city_to_excel(file_path, updated_file_path):
             zip_info = search.by_zipcode(str(zip_code).strip())
             if zip_info and zip_info.major_city:
                 cities.append(zip_info.major_city)
+                print(f"ZIP: {zip_code} -> City: {zip_info.major_city}")  # Debugging line
             else:
-                cities.append("")  # Fallback for unknown ZIP codes
+                cities.append("")
+                print(f"ZIP: {zip_code} -> City: Not found")  # Debugging line
 
         # Add the "city" column to the DataFrame
         df["city"] = cities
+        print(df.head())  # Debugging: Check if the "city" column exists
 
         # Save the updated DataFrame to a new Excel file
         df.to_excel(updated_file_path, index=False, engine="openpyxl")
-        print(f"Updated Excel file with 'city' column saved to {updated_file_path}")
+        print(f"File saved successfully at {updated_file_path}")
     except Exception as e:
         print(f"Error processing Excel file: {e}")
 

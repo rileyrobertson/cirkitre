@@ -1,3 +1,4 @@
+import os
 import json
 import pandas as pd
 import requests
@@ -12,6 +13,9 @@ def download_excel_file(url, local_path):
     """
     Downloads an Excel file from a given URL and saves it locally.
     """
+    # Ensure the directory exists
+    os.makedirs(os.path.dirname(local_path), exist_ok=True)
+
     try:
         response = requests.get(url)
         response.raise_for_status()

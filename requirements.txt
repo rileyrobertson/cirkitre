@@ -15,3 +15,5 @@ geopy==2.3.0
 
 # For scheduling tasks outside GitHub Actions (optional)
 schedule==1.2.0
+
+openpyxl==3.1.2

@@ -1,7 +1,7 @@
 # HTTP client for making API requests
 requests==2.31.0
 
-# Data manipulation and cleaning (optional but highly recommended)
+# Data manipulation and cleaning
 pandas==2.0.1
 
 # JSON schema validation
@@ -10,10 +10,5 @@ jsonschema==4.18.0
 # For parsing YAML configuration files (optional)
 pyyaml==6.0
 
-# For geographical data validation (optional, if needed for service areas)
-geopy==2.3.0
-
-# For scheduling tasks outside GitHub Actions (optional)
-schedule==1.2.0
-
-openpyxl==3.1.2
+# Compatible version of numpy
+numpy==1.23.5

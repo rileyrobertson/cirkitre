@@ -1,48 +1,79 @@
 import json
+import pandas as pd
 import requests
+from io import BytesIO
 
-# Path to the APIs configuration file and energy providers JSON file
-APIS_FILE = "apis.json"
-ENERGY_PROVIDERS_FILE = "energyproviders.json"
+# File paths
+EXCEL_FILE_URL = "https://downloads.energystar.gov/bi/portfolio-manager/Public_Utility_Map_en_US.xlsx?_gl=1*1uadakz*_ga*MjcyNDg3MTg3LjE3NDQ2NTE3NTg.*_ga_S0KJTVVLQ6*MTc0NDY1MTc1Ny4xLjEuMTc0NDY1MjIwOC4wLjAuMA.."
+LOCAL_EXCEL_FILE = "data/Public_Utility_Map_en_US.xlsx"
+ENERGY_PROVIDERS_JSON = "energyproviders.json"
 
-def fetch_data_from_api(api_url):
+def download_excel_file(url, local_path):
     """
-    Fetch data from a given API URL.
+    Downloads an Excel file from a given URL and saves it locally.
     """
     try:
-        response = requests.get(api_url)
-        response.raise_for_status()  # Raise exception for bad status codes
-        return response.json()
+        response = requests.get(url)
+        response.raise_for_status()
+        with open(local_path, "wb") as file:
+            file.write(response.content)
+        print(f"Downloaded Excel file to {local_path}")
     except requests.RequestException as e:
-        print(f"Error fetching data from {api_url}: {e}")
-        return None
+        print(f"Error downloading Excel file: {e}")
+
+def parse_excel_file(file_path):
+    """
+    Parses the Excel file to extract energy providers and their service areas.
+    """
+    try:
+        # Load the Excel file into a DataFrame
+        df = pd.read_excel(file_path, engine="openpyxl")
+        
+        # Inspect the first few rows to understand the structure
+        # Uncomment the following line to preview the data in development
+        # print(df.head())
+
+        # Extract relevant columns (adjust columns based on the actual structure of the file)
+        providers_data = []
+        for _, row in df.iterrows():
+            provider = {
+                "name": row.get("Utility Name", "Unknown").strip(),
+                "service_areas": [row.get("State", "Unknown").strip()]  # Add more fields as needed
+            }
+            providers_data.append(provider)
+        
+        print("Parsed Excel file successfully.")
+        return providers_data
+    except Exception as e:
+        print(f"Error parsing Excel file: {e}")
+        return []
 
 def update_energy_providers():
     """
-    Fetch data from multiple APIs and update the energyproviders.json file.
+    Updates the energyproviders.json file with data from the Excel file.
     """
-    # Load the list of APIs
-    with open(APIS_FILE, "r") as apis_file:
-        apis = json.load(apis_file)
-    
+    # Download the Excel file (optional, comment if file is already saved locally)
+    download_excel_file(EXCEL_FILE_URL, LOCAL_EXCEL_FILE)
+
+    # Parse the Excel file
+    new_providers = parse_excel_file(LOCAL_EXCEL_FILE)
+
     # Load existing energy providers data
-    with open(ENERGY_PROVIDERS_FILE, "r") as energy_file:
-        energy_providers = json.load(energy_file)
+    try:
+        with open(ENERGY_PROVIDERS_JSON, "r") as file:
+            energy_providers = json.load(file)
+    except FileNotFoundError:
+        energy_providers = []
 
-    # Fetch data from each API and update the JSON file
-    for api in apis:
-        print(f"Fetching data from {api['name']}...")
-        data = fetch_data_from_api(api["url"])
-        if data:
-            # Normalize and integrate data into energy_providers
-            for provider in data:
-                # Assuming API data matches the schema; otherwise, normalize here
-                energy_providers.append(provider)
+    # Merge new data into the existing data
+    for provider in new_providers:
+        if provider not in energy_providers:
+            energy_providers.append(provider)
 
-    # Save the updated data
-    with open(ENERGY_PROVIDERS_FILE, "w") as energy_file:
-        json.dump(energy_providers, energy_file, indent=4)
-    print(f"Updated {ENERGY_PROVIDERS_FILE} successfully!")
+    # Save the updated data to the JSON file
+    with open(ENERGY_PROVIDERS_JSON, "w") as file:
+        json.dump(energy_providers, file, indent=4)
+    print(f"Updated {ENERGY_PROVIDERS_JSON} successfully!")
 
 if __name__ == "__main__":
     update_energy_providers()

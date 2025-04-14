@@ -1,28 +1,12 @@
 import os
 import json
 import pandas as pd
-import requests
 from uszipcode import SearchEngine
 
 # File paths
-# EXCEL_FILE_URL = "https://downloads.energystar.gov/bi/portfolio-manager/Public_Utility_Map_en_US.xlsx?_gl=1*1uadakz*_ga*MjcyNDg3MTg3LjE3NDQ2NTE3NTg.*_ga_S0KJTVVLQ6*MTc0NDY1MTc1Ny4xLjEuMTc0NDY1MjIwOC4wLjAuMA.."
-LOCAL_EXCEL_FILE = "List of Utility Companies.xlsx"
+LOCAL_EXCEL_FILE = "List of Utility Companies.xlsx"  # Local file in the main repo
 UPDATED_EXCEL_FILE = "data/Public_Utility_Map_with_City.xlsx"
 ENERGY_PROVIDERS_JSON = "energyproviders.json"
-
-def download_excel_file(url, local_path):
-    """
-    Downloads an Excel file from a given URL and saves it locally.
-    """
-    os.makedirs(os.path.dirname(local_path), exist_ok=True)
-    try:
-        response = requests.get(url)
-        response.raise_for_status()
-        with open(local_path, "wb") as file:
-            file.write(response.content)
-        print(f"Downloaded Excel file to {local_path}")
-    except requests.RequestException as e:
-        print(f"Error downloading Excel file: {e}")
 
 def add_city_to_excel(file_path, updated_file_path):
     """
@@ -35,13 +19,18 @@ def add_city_to_excel(file_path, updated_file_path):
         # Load the Excel file into a DataFrame
         df = pd.read_excel(file_path, engine="openpyxl")
         
+        # Debug: Print column names
+        print("Columns in the Excel file:", df.columns)
+
         # Ensure "Zip Codes" column exists
-        if "Zip Code" not in df.columns:
-            raise KeyError("The expected 'Zip Code' column is not present in the Excel file.")
+        zip_column_name = "Zip Codes"  # Adjust this if the name is different
+        if zip_column_name not in df.columns:
+            print(f"The expected '{zip_column_name}' column is not present in the Excel file.")
+            return
 
         # Add a new "city" column
         cities = []
-        for zip_code in df["Zip Code"]:
+        for zip_code in df[zip_column_name]:
             if pd.isna(zip_code):
                 cities.append("")
                 continue
@@ -60,6 +49,7 @@ def add_city_to_excel(file_path, updated_file_path):
         print(df.head())  # Debugging: Check if the "city" column exists
 
         # Save the updated DataFrame to a new Excel file
+        os.makedirs(os.path.dirname(updated_file_path), exist_ok=True)
         df.to_excel(updated_file_path, index=False, engine="openpyxl")
         print(f"File saved successfully at {updated_file_path}")
     except Exception as e:
@@ -82,7 +72,7 @@ def parse_excel_file(file_path):
                     {
                         "city": row.get("city", "").strip(),
                         "state": row.get("State", "Unknown").strip(),
-                        "zip_codes": [row.get("Zip Code", "Unknown")]
+                        "zip_codes": [row.get("Zip Codes", "Unknown")]
                     }
                 ]
             }
@@ -98,9 +88,6 @@ def update_energy_providers():
     """
     Updates the energyproviders.json file with data from the Excel file.
     """
-    # Download the Excel file (optional, comment if file is already saved locally)
-    download_excel_file(EXCEL_FILE_URL, LOCAL_EXCEL_FILE)
-
     # Add "city" column to the Excel file
     add_city_to_excel(LOCAL_EXCEL_FILE, UPDATED_EXCEL_FILE)
 

@@ -1,362 +1,674 @@
 [
-  {
-    "provider": "Pacific Gas and Electric Company (PG&E)",
-    "service_areas": [
-        {
-          "city": "Albany",
-          "state": "California",
-          "zip_codes": ["94706", "94707", "94710"]
-        },
-        {
-          "city": "Berkeley",
-          "state": "California",
-          "zip_codes": ["94701", "94702", "94703", "94704", "94705", "94706", "94707", "94708", "94709", "94710", "94712", "94720"]
-        },
-        {
-          "city": "Castro Valley",
-          "state": "California",
-          "zip_codes": ["94546", "94552"]
-        },
-        {
-          "city": "Dublin",
-          "state": "California",
-          "zip_codes": ["94568"]
-        },
-        {
-          "city": "Emeryville",
-          "state": "California",
-          "zip_codes": ["94608"]
-        },
-        {
-          "city": "Fremont",
-          "state": "California",
-          "zip_codes": ["94536", "94537", "94538", "94539", "94555"]
-        },
-        {
-          "city": "Hayward",
-          "state": "California",
-          "zip_codes": ["94540", "94541", "94542", "94543", "94544", "94545", "94546", "94552"]
-        },
-        {
-          "city": "Livermore",
-          "state": "California",
-          "zip_codes": ["94550", "94551"]
-        },
-        {
-          "city": "Newark",
-          "state": "California",
-          "zip_codes": ["94560"]
-        },
-        {
-          "city": "Oakland",
-          "state": "California",
-          "zip_codes": ["94601", "94602", "94603", "94604", "94605", "94606", "94607", "94608", "94609", "94610", "94611", "94612", "94613",
-            "94614", "94615", "94618", "94619", "94620", "94621", "94622", "94623", "94649", "94659", "94660", "94661"
-          ]
-        },
-        {
-          "city": "Piedmont",
-          "state": "California",
-          "zip_codes": ["94602", "94610", "94611", "94618", "94620"]
-        },
-        {
-          "city": "Pleasanton",
-          "state": "California",
-          "zip_codes": ["94566", "94568", "94588"]
-        },
-        {
-          "city": "San Leandro",
-          "state": "California",
-          "zip_codes": ["94577", "94578", "94579"]
-        },
-        {
-          "city": "San Lorenzo",
-          "state": "California",
-          "zip_codes": ["94580"]
-        },
-        {
-          "city": "Sunol",
-          "state": "California",
-          "zip_codes": ["94586"]
-        },
-        {
-          "city": "Union City",
-          "state": "California",
-          "zip_codes": ["94587"]
-        },
-        {
-          "city": "Arnold",
-          "state": "California",
-          "zip_codes": ["95223"]
-        },
-        {
-          "city": "Markleeville",
-          "state": "California",
-          "zip_codes": ["96120"]
-        },
-        {
-          "city": "Amador City",
-          "state": "California",
-          "zip_codes": ["95601"]
-        },
-        {
-          "city": "Drytown",
-          "state": "California",
-          "zip_codes": ["95699"]
-        },
-        {
-          "city": "Fiddletown",
-          "state": "California",
-          "zip_codes": ["95629"]
-        },
-        {
-          "city": "Jackson",
-          "state": "California",
-          "zip_codes": ["95642", "95654"]
-        },
-        {
-          "city": "Pine Grove",
-          "state": "California",
-          "zip_codes": ["95665"]
-        },
-        {
-          "city": "Pioneer",
-          "state": "California",
-          "zip_codes": ["95666"]
-        },
-        {
-          "city": "Plymouth",
-          "state": "California",
-          "zip_codes": ["95669"]
-        },
-        {
-          "city": "River Pines",
-          "state": "California",
-          "zip_codes": ["95675"]
-        },
-        {
-          "city": "Volcano",
-          "state": "California",
-          "zip_codes": ["95689"]
-        },
-        {
-          "city": "Chico",
-          "state": "California",
-          "zip_codes": ["95926", "95927", "95928", "95929", "95973", "95976"]
-        },
-        {
-          "city": "Gridley",
-          "state": "California",
-          "zip_codes": ["95948"]
-        },
-        {
-          "city": "Paradise",
-          "state": "California",
-          "zip_codes": ["95967", "95969"]
-        },
-        {
-          "city": "Altaville",
-          "state": "California",
-          "zip_codes": ["95221"]
-        },
-        {
-          "city": "Angels Camp",
-          "state": "California",
-          "zip_codes": ["95221", "95222"]
-        },
-        {
-          "city": "Copperopolis",
-          "state": "California",
-          "zip_codes": ["95228"]
-        },
-        {
-          "city": "San Andreas",
-          "state": "California",
-          "zip_codes": ["95249"]
-        },
-        {
-          "city": "Valley Springs",
-          "state": "California",
-          "zip_codes": ["95252"]
-        },
-        {
-          "city": "Williams",
-          "state": "California",
-          "zip_codes": ["95987"]
-        },
-        {
-          "city": "Concord",
-          "state": "California",
-          "zip_codes": ["94518", "94519", "94520", "94521", "94522", "94523", "94524", "94527", "94529"]
-        },
-        {
-          "city": "Martinez",
-          "state": "California",
-          "zip_codes": ["94553"]
-        },
-        {
-          "city": "Richmond",
-          "state": "California",
-          "zip_codes": ["94801", "94802", "94803", "94804", "94805", "94806", "94807", "94808", "94850"]
-        },
-        {
-          "city": "San Ramon",
-          "state": "California",
-          "zip_codes": ["94582", "94583"]
-        },
-        {
-          "city": "Walnut Creek",
-          "state": "California",
-          "zip_codes": ["94595", "94596", "94597", "94598"]
-        },
-        {
-          "city": "Fresno",
-          "state": "California",
-          "zip_codes": ["93650", "93701", "93702", "93703", "93704", "93705", "93706", "93707", "93709", "93710", "93711", "93712", "93718",
-            "93720", "93721", "93722", "93723", "93724", "93725", "93726", "93727", "93728", "93729", "93730", "93737", "93740", "93741",
-            "93744", "93745", "93760", "93764", "93765", "93771", "93772", "93776", "93778", "93790", "93792"
-          ]
-        },
-        {
-          "city": "Modesto",
-          "state": "California",
-          "zip_codes": ["95350", "95351", "95352", "95353", "95354", "95355", "95356", "95357", "95358", "95397"]
-        }
-    ]
-  },
-  {
-    "provider": "Southern California Edison (SCE)",
-    "service_areas": [
-      {
-        "city": "Bishop",
-        "state": "California",
-        "zip_codes": ["93514", "93515"]
-      },
-      {
-        "city": "Mammoth Lakes",
-        "state": "California",
-        "zip_codes": ["93546"]
-      },
-      {
-        "city": "Big Pine",
-        "state": "California",
-        "zip_codes": ["93513"]
-      }
-    ]
-  },
-  {
-    "provider": "San Diego Gas & Electric (SDG&E)",
-    "service_areas": [
-      {
-        "city": "Carlsbad",
-        "state": "California",
-        "zip_codes": ["92008", "92009", "92010", "92011"]
-      },
-      {
-        "city": "Encinitas",
-        "state": "California",
-        "zip_codes": ["92024", "92023"]
-      },
-      {
-        "city": "San Diego",
-        "state": "California",
-        "zip_codes": ["92101", "92102", "92103", "92104", "92105", "92106"]
-      }
-    ]
-  },
-  {
-    "provider": "Los Angeles Department of Water and Power (LADWP)",
-    "service_areas": [
-      {
-        "city": "Los Angeles",
-        "state": "California",
-        "zip_codes": ["90001", "90002", "90003", "90004", "90005", "90006"]
-      },
-      {
-        "city": "Burbank",
-        "state": "California",
-        "zip_codes": ["91501", "91502", "91503", "91504", "91505", "91506"]
-      }
-    ]
-  },
-  {
-    "provider": "SMUD (Sacramento Municipal Utility District)",
-    "service_areas": [
-      {
-        "city": "Sacramento",
-        "state": "California",
-        "zip_codes": ["95814", "95815", "95816", "95817", "95818", "95819", "95820"]
-      },
-      {
-        "city": "Citrus Heights",
-        "state": "California",
-        "zip_codes": ["95610", "95611", "95621"]
-      },
-      {
-        "city": "Rancho Cordova",
-        "state": "California",
-        "zip_codes": ["95670", "95741", "95742"]
-      }
-    ]
-  },
-  {
-    "provider": "Marin Clean Energy (MCE)",
-    "service_areas": [
-      {
-        "city": "San Rafael",
-        "state": "California",
-        "zip_codes": ["94901", "94903", "94912", "94913", "94915"]
-      },
-      {
-        "city": "Novato",
-        "state": "California",
-        "zip_codes": ["94945", "94947", "94948", "94949", "94998"]
-      },
-      {
-        "city": "Fairfax",
-        "state": "California",
-        "zip_codes": ["94930"]
-      }
-    ]
-  },
-  {
-    "provider": "Sonoma Clean Power",
-    "service_areas": [
-      {
-        "city": "Santa Rosa",
-        "state": "California",
-        "zip_codes": ["95401", "95402", "95403", "95404", "95405", "95406", "95407"]
-      },
-      {
-        "city": "Petaluma",
-        "state": "California",
-        "zip_codes": ["94952", "94953", "94954", "94955", "94975"]
-      },
-      {
-        "city": "Sebastopol",
-        "state": "California",
-        "zip_codes": ["95472", "95473"]
-      }
-    ]
-  },
-  {
-    "provider": "Liberty Utilities",
-    "service_areas": [
-      {
-        "city": "South Lake Tahoe",
-        "state": "California",
-        "zip_codes": ["96150", "96151", "96152", "96153", "96154", "96155", "96156", "96157", "96158"]
-      },
-      {
-        "city": "Truckee",
-        "state": "California",
-        "zip_codes": ["96160", "96161", "96162"]
-      },
-      {
-        "city": "Meyers",
-        "state": "California",
-        "zip_codes": ["96150"]
-      }
-    ]
-  }
+    {
+        "provider": "Pacific Gas and Electric Company (PG&E)",
+        "service_areas": [
+            {
+                "city": "Albany",
+                "state": "California",
+                "zip_codes": [
+                    "94706",
+                    "94707",
+                    "94710"
+                ]
+            },
+            {
+                "city": "Berkeley",
+                "state": "California",
+                "zip_codes": [
+                    "94701",
+                    "94702",
+                    "94703",
+                    "94704",
+                    "94705",
+                    "94706",
+                    "94707",
+                    "94708",
+                    "94709",
+                    "94710",
+                    "94712",
+                    "94720"
+                ]
+            },
+            {
+                "city": "Castro Valley",
+                "state": "California",
+                "zip_codes": [
+                    "94546",
+                    "94552"
+                ]
+            },
+            {
+                "city": "Dublin",
+                "state": "California",
+                "zip_codes": [
+                    "94568"
+                ]
+            },
+            {
+                "city": "Emeryville",
+                "state": "California",
+                "zip_codes": [
+                    "94608"
+                ]
+            },
+            {
+                "city": "Fremont",
+                "state": "California",
+                "zip_codes": [
+                    "94536",
+                    "94537",
+                    "94538",
+                    "94539",
+                    "94555"
+                ]
+            },
+            {
+                "city": "Hayward",
+                "state": "California",
+                "zip_codes": [
+                    "94540",
+                    "94541",
+                    "94542",
+                    "94543",
+                    "94544",
+                    "94545",
+                    "94546",
+                    "94552"
+                ]
+            },
+            {
+                "city": "Livermore",
+                "state": "California",
+                "zip_codes": [
+                    "94550",
+                    "94551"
+                ]
+            },
+            {
+                "city": "Newark",
+                "state": "California",
+                "zip_codes": [
+                    "94560"
+                ]
+            },
+            {
+                "city": "Oakland",
+                "state": "California",
+                "zip_codes": [
+                    "94601",
+                    "94602",
+                    "94603",
+                    "94604",
+                    "94605",
+                    "94606",
+                    "94607",
+                    "94608",
+                    "94609",
+                    "94610",
+                    "94611",
+                    "94612",
+                    "94613",
+                    "94614",
+                    "94615",
+                    "94618",
+                    "94619",
+                    "94620",
+                    "94621",
+                    "94622",
+                    "94623",
+                    "94649",
+                    "94659",
+                    "94660",
+                    "94661"
+                ]
+            },
+            {
+                "city": "Piedmont",
+                "state": "California",
+                "zip_codes": [
+                    "94602",
+                    "94610",
+                    "94611",
+                    "94618",
+                    "94620"
+                ]
+            },
+            {
+                "city": "Pleasanton",
+                "state": "California",
+                "zip_codes": [
+                    "94566",
+                    "94568",
+                    "94588"
+                ]
+            },
+            {
+                "city": "San Leandro",
+                "state": "California",
+                "zip_codes": [
+                    "94577",
+                    "94578",
+                    "94579"
+                ]
+            },
+            {
+                "city": "San Lorenzo",
+                "state": "California",
+                "zip_codes": [
+                    "94580"
+                ]
+            },
+            {
+                "city": "Sunol",
+                "state": "California",
+                "zip_codes": [
+                    "94586"
+                ]
+            },
+            {
+                "city": "Union City",
+                "state": "California",
+                "zip_codes": [
+                    "94587"
+                ]
+            },
+            {
+                "city": "Arnold",
+                "state": "California",
+                "zip_codes": [
+                    "95223"
+                ]
+            },
+            {
+                "city": "Markleeville",
+                "state": "California",
+                "zip_codes": [
+                    "96120"
+                ]
+            },
+            {
+                "city": "Amador City",
+                "state": "California",
+                "zip_codes": [
+                    "95601"
+                ]
+            },
+            {
+                "city": "Drytown",
+                "state": "California",
+                "zip_codes": [
+                    "95699"
+                ]
+            },
+            {
+                "city": "Fiddletown",
+                "state": "California",
+                "zip_codes": [
+                    "95629"
+                ]
+            },
+            {
+                "city": "Jackson",
+                "state": "California",
+                "zip_codes": [
+                    "95642",
+                    "95654"
+                ]
+            },
+            {
+                "city": "Pine Grove",
+                "state": "California",
+                "zip_codes": [
+                    "95665"
+                ]
+            },
+            {
+                "city": "Pioneer",
+                "state": "California",
+                "zip_codes": [
+                    "95666"
+                ]
+            },
+            {
+                "city": "Plymouth",
+                "state": "California",
+                "zip_codes": [
+                    "95669"
+                ]
+            },
+            {
+                "city": "River Pines",
+                "state": "California",
+                "zip_codes": [
+                    "95675"
+                ]
+            },
+            {
+                "city": "Volcano",
+                "state": "California",
+                "zip_codes": [
+                    "95689"
+                ]
+            },
+            {
+                "city": "Chico",
+                "state": "California",
+                "zip_codes": [
+                    "95926",
+                    "95927",
+                    "95928",
+                    "95929",
+                    "95973",
+                    "95976"
+                ]
+            },
+            {
+                "city": "Gridley",
+                "state": "California",
+                "zip_codes": [
+                    "95948"
+                ]
+            },
+            {
+                "city": "Paradise",
+                "state": "California",
+                "zip_codes": [
+                    "95967",
+                    "95969"
+                ]
+            },
+            {
+                "city": "Altaville",
+                "state": "California",
+                "zip_codes": [
+                    "95221"
+                ]
+            },
+            {
+                "city": "Angels Camp",
+                "state": "California",
+                "zip_codes": [
+                    "95221",
+                    "95222"
+                ]
+            },
+            {
+                "city": "Copperopolis",
+                "state": "California",
+                "zip_codes": [
+                    "95228"
+                ]
+            },
+            {
+                "city": "San Andreas",
+                "state": "California",
+                "zip_codes": [
+                    "95249"
+                ]
+            },
+            {
+                "city": "Valley Springs",
+                "state": "California",
+                "zip_codes": [
+                    "95252"
+                ]
+            },
+            {
+                "city": "Williams",
+                "state": "California",
+                "zip_codes": [
+                    "95987"
+                ]
+            },
+            {
+                "city": "Concord",
+                "state": "California",
+                "zip_codes": [
+                    "94518",
+                    "94519",
+                    "94520",
+                    "94521",
+                    "94522",
+                    "94523",
+                    "94524",
+                    "94527",
+                    "94529"
+                ]
+            },
+            {
+                "city": "Martinez",
+                "state": "California",
+                "zip_codes": [
+                    "94553"
+                ]
+            },
+            {
+                "city": "Richmond",
+                "state": "California",
+                "zip_codes": [
+                    "94801",
+                    "94802",
+                    "94803",
+                    "94804",
+                    "94805",
+                    "94806",
+                    "94807",
+                    "94808",
+                    "94850"
+                ]
+            },
+            {
+                "city": "San Ramon",
+                "state": "California",
+                "zip_codes": [
+                    "94582",
+                    "94583"
+                ]
+            },
+            {
+                "city": "Walnut Creek",
+                "state": "California",
+                "zip_codes": [
+                    "94595",
+                    "94596",
+                    "94597",
+                    "94598"
+                ]
+            },
+            {
+                "city": "Fresno",
+                "state": "California",
+                "zip_codes": [
+                    "93650",
+                    "93701",
+                    "93702",
+                    "93703",
+                    "93704",
+                    "93705",
+                    "93706",
+                    "93707",
+                    "93709",
+                    "93710",
+                    "93711",
+                    "93712",
+                    "93718",
+                    "93720",
+                    "93721",
+                    "93722",
+                    "93723",
+                    "93724",
+                    "93725",
+                    "93726",
+                    "93727",
+                    "93728",
+                    "93729",
+                    "93730",
+                    "93737",
+                    "93740",
+                    "93741",
+                    "93744",
+                    "93745",
+                    "93760",
+                    "93764",
+                    "93765",
+                    "93771",
+                    "93772",
+                    "93776",
+                    "93778",
+                    "93790",
+                    "93792"
+                ]
+            },
+            {
+                "city": "Modesto",
+                "state": "California",
+                "zip_codes": [
+                    "95350",
+                    "95351",
+                    "95352",
+                    "95353",
+                    "95354",
+                    "95355",
+                    "95356",
+                    "95357",
+                    "95358",
+                    "95397"
+                ]
+            }
+        ]
+    },
+    {
+        "provider": "Southern California Edison (SCE)",
+        "service_areas": [
+            {
+                "city": "Bishop",
+                "state": "California",
+                "zip_codes": [
+                    "93514",
+                    "93515"
+                ]
+            },
+            {
+                "city": "Mammoth Lakes",
+                "state": "California",
+                "zip_codes": [
+                    "93546"
+                ]
+            },
+            {
+                "city": "Big Pine",
+                "state": "California",
+                "zip_codes": [
+                    "93513"
+                ]
+            }
+        ]
+    },
+    {
+        "provider": "San Diego Gas & Electric (SDG&E)",
+        "service_areas": [
+            {
+                "city": "Carlsbad",
+                "state": "California",
+                "zip_codes": [
+                    "92008",
+                    "92009",
+                    "92010",
+                    "92011"
+                ]
+            },
+            {
+                "city": "Encinitas",
+                "state": "California",
+                "zip_codes": [
+                    "92024",
+                    "92023"
+                ]
+            },
+            {
+                "city": "San Diego",
+                "state": "California",
+                "zip_codes": [
+                    "92101",
+                    "92102",
+                    "92103",
+                    "92104",
+                    "92105",
+                    "92106"
+                ]
+            }
+        ]
+    },
+    {
+        "provider": "Los Angeles Department of Water and Power (LADWP)",
+        "service_areas": [
+            {
+                "city": "Los Angeles",
+                "state": "California",
+                "zip_codes": [
+                    "90001",
+                    "90002",
+                    "90003",
+                    "90004",
+                    "90005",
+                    "90006"
+                ]
+            },
+            {
+                "city": "Burbank",
+                "state": "California",
+                "zip_codes": [
+                    "91501",
+                    "91502",
+                    "91503",
+                    "91504",
+                    "91505",
+                    "91506"
+                ]
+            }
+        ]
+    },
+    {
+        "provider": "SMUD (Sacramento Municipal Utility District)",
+        "service_areas": [
+            {
+                "city": "Sacramento",
+                "state": "California",
+                "zip_codes": [
+                    "95814",
+                    "95815",
+                    "95816",
+                    "95817",
+                    "95818",
+                    "95819",
+                    "95820"
+                ]
+            },
+            {
+                "city": "Citrus Heights",
+                "state": "California",
+                "zip_codes": [
+                    "95610",
+                    "95611",
+                    "95621"
+                ]
+            },
+            {
+                "city": "Rancho Cordova",
+                "state": "California",
+                "zip_codes": [
+                    "95670",
+                    "95741",
+                    "95742"
+                ]
+            }
+        ]
+    },
+    {
+        "provider": "Marin Clean Energy (MCE)",
+        "service_areas": [
+            {
+                "city": "San Rafael",
+                "state": "California",
+                "zip_codes": [
+                    "94901",
+                    "94903",
+                    "94912",
+                    "94913",
+                    "94915"
+                ]
+            },
+            {
+                "city": "Novato",
+                "state": "California",
+                "zip_codes": [
+                    "94945",
+                    "94947",
+                    "94948",
+                    "94949",
+                    "94998"
+                ]
+            },
+            {
+                "city": "Fairfax",
+                "state": "California",
+                "zip_codes": [
+                    "94930"
+                ]
+            }
+        ]
+    },
+    {
+        "provider": "Sonoma Clean Power",
+        "service_areas": [
+            {
+                "city": "Santa Rosa",
+                "state": "California",
+                "zip_codes": [
+                    "95401",
+                    "95402",
+                    "95403",
+                    "95404",
+                    "95405",
+                    "95406",
+                    "95407"
+                ]
+            },
+            {
+                "city": "Petaluma",
+                "state": "California",
+                "zip_codes": [
+                    "94952",
+                    "94953",
+                    "94954",
+                    "94955",
+                    "94975"
+                ]
+            },
+            {
+                "city": "Sebastopol",
+                "state": "California",
+                "zip_codes": [
+                    "95472",
+                    "95473"
+                ]
+            }
+        ]
+    },
+    {
+        "provider": "Liberty Utilities",
+        "service_areas": [
+            {
+                "city": "South Lake Tahoe",
+                "state": "California",
+                "zip_codes": [
+                    "96150",
+                    "96151",
+                    "96152",
+                    "96153",
+                    "96154",
+                    "96155",
+                    "96156",
+                    "96157",
+                    "96158"
+                ]
+            },
+            {
+                "city": "Truckee",
+                "state": "California",
+                "zip_codes": [
+                    "96160",
+                    "96161",
+                    "96162"
+                ]
+            },
+            {
+                "city": "Meyers",
+                "state": "California",
+                "zip_codes": [
+                    "96150"
+                ]
+            }
+        ]
+    }
 ]

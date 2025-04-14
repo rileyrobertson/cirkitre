@@ -4,7 +4,7 @@ import pandas as pd
 from uszipcode import SearchEngine
 
 # File paths
-LOCAL_EXCEL_FILE = "util.xlsx"  # Local file in the main repo
+LOCAL_EXCEL_FILE = "List of Utility Companies.xlsx"  # Local file in the main repo
 UPDATED_EXCEL_FILE = "data/Public_Utility_Map_with_City.xlsx"
 ENERGY_PROVIDERS_JSON = "energyproviders.json"
 

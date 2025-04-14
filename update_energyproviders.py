@@ -36,12 +36,12 @@ def add_city_to_excel(file_path, updated_file_path):
         df = pd.read_excel(file_path, engine="openpyxl")
         
         # Ensure "Zip Codes" column exists
-        if "Zip Codes" not in df.columns:
-            raise KeyError("The expected 'Zip Codes' column is not present in the Excel file.")
+        if "Zip Code" not in df.columns:
+            raise KeyError("The expected 'Zip Code' column is not present in the Excel file.")
 
         # Add a new "city" column
         cities = []
-        for zip_code in df["Zip Codes"]:
+        for zip_code in df["Zip Code"]:
             if pd.isna(zip_code):
                 cities.append("")
                 continue
@@ -82,7 +82,7 @@ def parse_excel_file(file_path):
                     {
                         "city": row.get("city", "").strip(),
                         "state": row.get("State", "Unknown").strip(),
-                        "zip_codes": [row.get("Zip Codes", "Unknown")]
+                        "zip_codes": [row.get("Zip Code", "Unknown")]
                     }
                 ]
             }

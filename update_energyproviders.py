@@ -40,7 +40,7 @@ def parse_excel_file(file_path):
         providers_data = []
         for _, row in df.iterrows():
             provider = {
-                "name": row.get("Utility Name", "Unknown").strip(),
+                "provider": row.get("Utility Name", "Unknown").strip(),
                 "service_areas": [
                     {
                         "city": "",  # Assuming city is not provided in the file

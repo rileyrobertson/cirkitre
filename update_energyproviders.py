@@ -22,8 +22,8 @@ def add_city_to_excel(file_path, updated_file_path):
         # Debug: Print column names
         print("Columns in the Excel file:", df.columns)
 
-        # Ensure "Zip Codes" column exists
-        zip_column_name = "Zip Codes"  # Adjust this if the name is different
+        # Ensure "Zip Code" column exists
+        zip_column_name = "Zip Code"  # Updated to look for "Zip Code"
         if zip_column_name not in df.columns:
             print(f"The expected '{zip_column_name}' column is not present in the Excel file.")
             return
@@ -72,7 +72,7 @@ def parse_excel_file(file_path):
                     {
                         "city": row.get("city", "").strip(),
                         "state": row.get("State", "Unknown").strip(),
-                        "zip_codes": [row.get("Zip Codes", "Unknown")]
+                        "zip_codes": [row.get("Zip Code", "Unknown")]  # Updated to match "Zip Code"
                     }
                 ]
             }

@@ -2,7 +2,6 @@ import os
 import json
 import pandas as pd
 import requests
-from io import BytesIO
 
 # File paths
 EXCEL_FILE_URL = "https://downloads.energystar.gov/bi/portfolio-manager/Public_Utility_Map_en_US.xlsx?_gl=1*1uadakz*_ga*MjcyNDg3MTg3LjE3NDQ2NTE3NTg.*_ga_S0KJTVVLQ6*MTc0NDY1MTc1Ny4xLjEuMTc0NDY1MjIwOC4wLjAuMA.."
@@ -29,34 +28,34 @@ def parse_excel_file(file_path):
     """
     Parses the Excel file to extract energy providers and their service areas.
     """
-try:
-    # Load the Excel file into a DataFrame
-    df = pd.read_excel(file_path, engine="openpyxl")
-    
-    # Inspect the first few rows to understand the structure
-    # Uncomment the following line to preview the data in development
-    # print(df.head())
+    try:
+        # Load the Excel file into a DataFrame
+        df = pd.read_excel(file_path, engine="openpyxl")
+        
+        # Inspect the first few rows to understand the structure
+        # Uncomment the following line to preview the data in development
+        # print(df.head())
 
-    # Extract relevant columns (adjust columns based on the actual structure of the file)
-    providers_data = []
-    for _, row in df.iterrows():
-        provider = {
-            "name": row.get("Utility Name", "Unknown").strip(),
-            "service_areas": [
-                {
-                    "city": "",  # Assuming city is not provided in the file
-                    "state": row.get("State", "Unknown").strip(),  # Full state name
-                    "zip_codes": [row.get("Zip Codes", "Unknown")]  # A single ZIP code (may require splitting if multiple ZIPs are listed)
-                }
-            ]
-        }
-        providers_data.append(provider)
-    
-    print("Parsed Excel file successfully.")
-    return providers_data
-except Exception as e:
-    print(f"Error parsing Excel file: {e}")
-    return []
+        # Extract relevant columns (adjust columns based on the actual structure of the file)
+        providers_data = []
+        for _, row in df.iterrows():
+            provider = {
+                "name": row.get("Utility Name", "Unknown").strip(),
+                "service_areas": [
+                    {
+                        "city": "",  # Assuming city is not provided in the file
+                        "state": row.get("State", "Unknown").strip(),  # Full state name
+                        "zip_codes": [row.get("Zip Codes", "Unknown")]  # A single ZIP code (may require splitting if multiple ZIPs are listed)
+                    }
+                ]
+            }
+            providers_data.append(provider)
+        
+        print("Parsed Excel file successfully.")
+        return providers_data
+    except Exception as e:
+        print(f"Error parsing Excel file: {e}")
+        return []
 
 def update_energy_providers():
     """

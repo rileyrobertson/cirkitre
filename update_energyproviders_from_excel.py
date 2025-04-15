@@ -42,6 +42,8 @@ def generate_energy_providers_json(excel_file, json_file):
             })
 
         # Save the JSON structure to a file
+        if os.path.dirname(json_file):  # Check if a directory path exists
+            os.makedirs(os.path.dirname(json_file), exist_ok=True)
         with open(json_file, "w") as file:
             json.dump(providers, file, indent=4)
         print(f"Successfully updated {json_file}")
@@ -50,8 +52,5 @@ def generate_energy_providers_json(excel_file, json_file):
         print(f"Error processing data: {e}")
 
 if __name__ == "__main__":
-    # Ensure the output directory exists
-    os.makedirs(os.path.dirname(JSON_FILE), exist_ok=True)
-    
     # Generate the JSON file
     generate_energy_providers_json(EXCEL_FILE, JSON_FILE)
